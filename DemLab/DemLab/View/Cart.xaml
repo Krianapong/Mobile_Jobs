@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemLab.ViewModels"
+             BackgroundColor="#1C375C"
+             x:Class="DemLab.View.Cart">
+    <ContentPage.BindingContext>
+        <local:CartViewModels/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,30" Source="avatar7.png" Aspect="AspectFit" HeightRequest="90" WidthRequest="80" />
+            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1C375C" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Text="{Binding Login.Username}" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand" />
+                    <Label Grid.Row="1" Margin="0,-15,0,0" Text="{Binding selectedProduct}" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand" />
+                    <Label Grid.Row="2" Margin="0,-15,0,0" Text="{Binding Login.Name}" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand" />
+                    <Label Grid.Row="3" Margin="0,-15,0,0" Text="{Binding Login.Mobile}" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand" />
+                    <Label Grid.Row="4" Margin="0,-15,0,0" Text="{Binding Login.Country}" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand" />
+                    <Button Grid.Row="5" Text="Logout" BackgroundColor="#CE026F" CornerRadius="20" TextColor="White" Command ="{Binding BackCommand}"/>
+
+                </Grid>
+            </Frame>
+        </Grid>
+        <!--
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" Grid.Row="0" 
+                               Text="{Binding Title}"/>
+                        <Label Grid.Column="1" Grid.Row="1" 
+                               Text="{Binding Price}"/>
+
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+            <Button Text="Logout" Command="{Binding LogoutCommand}" />
+        </StackLayout>
+        -->
+        
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#282A3A"
+             x:Class="DemLab.View.ProductDetail">
+    <!-- <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".9*"/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".3*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Image HeightRequest="150" WidthRequest="150" 
+                   Source="{Binding selectedProduct.CompanyImage}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Label Text="{Binding selectedProduct.CompanyName}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.Title}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.JobType}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.LastDateToApply}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.Salary}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.Email}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.Address}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="{Binding selectedProduct.Website}" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+
+        <Button Text="Close" Command="{Binding CloseCommand}" FontSize="Medium" CornerRadius="10" Grid.Row="9" Grid.Column="0"  />
+        <Button Text="Add" Command="{Binding AddCommand}" FontSize="Medium" CornerRadius="10" Grid.Row="9" Grid.Column="1"/>
+
+        <Button Text="Back" FontSize="Medium" CornerRadius="10" Grid.Row="4" Grid.Column="0" />
+
+        <Button Text="ADD" FontSize="Medium" CornerRadius="10" Grid.Row="4" Grid.Column="1"/>
+    </Grid> -->
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image HeightRequest="150" WidthRequest="150" 
+                   Source="{Binding selectedProduct.CompanyImage}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label TextColor="White" FontSize="22" Text="{Binding selectedProduct.CompanyName}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16"  Text="{Binding selectedProduct.Title}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.JobType}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.LastDateToApply}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.Salary}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.Email}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.Address}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Label TextColor="White" FontSize="16" Text="{Binding selectedProduct.Website}" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+                <Button BackgroundColor="#1C375C" TextColor="White" Text="Close" Command="{Binding CloseCommand}" FontSize="Medium" CornerRadius="10" Grid.Row="9" Grid.Column="0"  />
+                <Button BackgroundColor="#CE026F" TextColor="White" Text="Add" Command="{Binding AddCommand}" FontSize="Medium" CornerRadius="10" Grid.Row="9" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

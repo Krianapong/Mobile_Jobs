@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemLab.ViewModels"
+             BackgroundColor="#5972A7"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:fontawesome="clr-namespace:LoginUIDesigns.Models"
+             x:Class="DemLab.View.Login">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,30" Source="logo.png" Aspect="AspectFit" HeightRequest="90" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1C375C" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Text="DIGIJOBS" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Grid.Row="1" Margin="0,-15,0,0" Text="Login in to account" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry Grid.Row="2"  Text="{Binding Login.Email}" Placeholder="Username" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Entry Grid.Row="3"  Text="{Binding Login.Password}" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Button Grid.Row="4" Text="Login" BackgroundColor="#1C375C" CornerRadius="20" TextColor="White" Command="{Binding LoginCommand}" />
+                    <Button Grid.Row="5" Text="or signin with" BackgroundColor="#CE026F" CornerRadius="20" TextColor="White" Command="{Binding RegisterCommand}"/>
+                    <Label Grid.Row="6" Text="{Binding Result}" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                   
+                </Grid>
+            </Frame>
+        </Grid>
+        <!--  <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Login" FontSize="Large" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" />
+            
+            <Entry Placeholder="MyEmail" FontSize="Large" Grid.Column="0" Grid.Row="1" 
+                   Text="{Binding Login.Email}" Grid.ColumnSpan="2" />
+            
+            <Entry Placeholder="MyPassword" FontSize="Large" Grid.Column="0" Grid.Row="2" IsPassword="True"
+                   Text="{Binding Login.Password}" Grid.ColumnSpan="2" />
+
+            <Button Text="Login" Grid.Column="0" Grid.Row="3" FontSize="Medium" CornerRadius="10"
+                    Command="{Binding LoginCommand}" Grid.ColumnSpan="2"/>
+            
+            <Button Text="Register" Grid.Column="0" Grid.Row="4" FontSize="Medium" CornerRadius="10"
+                    Command="{Binding RegisterCommand}" Grid.ColumnSpan="2"/>
+
+            <Label Grid.Column="0" Grid.Row="5" FontSize="Large" 
+                   Text="{Binding Result}"/>
+        </Grid> -->
+        <!--
+        <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Image Source="logo.png" WidthRequest="180" HeightRequest="180" />
+
+            <Entry Placeholder="Email" FontSize="Large" TextColor="White" PlaceholderColor="White"
+                   Text="{Binding Login.Email}"/>
+
+            <Entry Placeholder="Password" FontSize="Large" IsPassword="True" TextColor="White" PlaceholderColor="White"
+                   Text="{Binding Login.Password}" />
+            
+            <Button Text="Login"  BorderColor="Green"
+                    Command="{Binding LoginCommand}" VerticalOptions="Center" BackgroundColor="Transparent" BorderWidth="1.5" CornerRadius="50" TextColor="White" />
+            <Button Text="Register" BorderColor="Orange"
+                    Command="{Binding RegisterCommand}" VerticalOptions="Center" BackgroundColor="Transparent" BorderWidth="1.5" CornerRadius="50" TextColor="White" />
+
+            <Label Text="{Binding Result}" TextColor="White"/> 
+        </StackLayout> -->
+        
+        
+     </ContentPage.Content>
+</ContentPage>

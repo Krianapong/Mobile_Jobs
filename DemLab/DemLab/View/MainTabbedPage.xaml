@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:DemLab.View"
+             x:Class="DemLab.View.MainTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Jobs" IconImageSource="https://cdn-icons-png.flaticon.com/512/2910/2910791.png">
+        <x:Arguments>
+            <local:ProductList/>
+        </x:Arguments>
+    </NavigationPage>
+    <local:Cart Title="Profile" IconImageSource="https://cdn-icons-png.flaticon.com/512/456/456212.png"/>
+</TabbedPage>

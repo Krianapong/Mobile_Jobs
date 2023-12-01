@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemLab.ViewModels"
+             BackgroundColor="#CE026F"
+              Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:fontawesome="clr-namespace:LoginUIDesigns.Models"
+             x:Class="DemLab.View.Register">
+    <ContentPage.BindingContext>
+        <local:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <!-- <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Register" FontSize="Large" Grid.Column="0" Grid.Row="0"/>
+            <Entry Placeholder="Email" FontSize="Large" Grid.Column="0" Grid.Row="1" 
+                   Text="{Binding Register.Email}"/>
+
+            <Entry Placeholder="Password" FontSize="Large" Grid.Column="0" Grid.Row="2" IsPassword="True"
+                   Text="{Binding Register.Password}"/>
+            <Entry Placeholder="Confirm Password" FontSize="Large" Grid.Column="0" Grid.Row="3" IsPassword="True"
+                   Text="{Binding Register.ConfirmPassword}"/>
+            <Button Text="Register" Grid.Column="0" Grid.Row="4" FontSize="Large"
+                    Command="{Binding RegisterCommand}"/>
+            <Button Text="Back" Grid.Column="0" Grid.Row="5" FontSize="Large" 
+                    Command ="{Binding BackCommand}" />
+
+            <Label Grid.Column="0" Grid.Row="6" FontSize="Large" />
+
+        </Grid> -->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,30" Source="logo.png" Aspect="AspectFit" HeightRequest="90" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1C375C" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"  Text="DIGIJOBS" FontSize="24" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Grid.Row="1" Margin="0,-15,0,0" Text="Register in to account" TextColor="#1C375C"  HorizontalOptions="CenterAndExpand"></Label>
+                    <Entry Grid.Row="2"  Text="{Binding Register.Email}" Placeholder="Username" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Entry Grid.Row="3"  Text="{Binding Register.Password}" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Entry Grid.Row="4"  Text="{Binding Register.ConfirmPassword}" Placeholder="Password" IsPassword="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Button Grid.Row="5" Text="Login" BackgroundColor="#1C375C" CornerRadius="20" TextColor="White" Command="{Binding RegisterCommand}" />
+                    <Button Grid.Row="6" Text="Back" BackgroundColor="#CE026F" CornerRadius="20" TextColor="White" Command ="{Binding BackCommand}"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
